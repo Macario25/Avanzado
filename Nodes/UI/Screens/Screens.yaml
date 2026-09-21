@@ -503,7 +503,7 @@ Children:
               - Name: ns=3;ObjectPointer
                 Type: NodePointer
                 DataType: NodeId
-                Value: "/Objects/Avanzado/NetLogic/TwilioAPIClient"
+                Value: {"IdType":2,"Id":"85f31992aaa2340a096d12b18915a3c9","Namespace":24}
                 Children:
                 - Name: Kind
                   Type: PropertyType
