@@ -1,0 +1,155 @@
+Name: DataStores
+Type: DataStoresCategoryFolder
+Children:
+- Name: RemoteInfluxDBDatabase1
+  Id: g=92f3c21e47dfdc2183b08f9d7d466ac8
+  Type: InfluxDBStoreRemote
+  Children:
+  - Name: Server
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "us-east-1-1.aws.cloud2.influxdata.com"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 443
+  - Name: UseSSL
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: SFEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: SFBufferMaxSize
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1000
+  - Name: SFBufferUsage
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: SFBufferOverflow
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: SFBufferOverwrite
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Tables
+    Type: BaseObjectType
+    Children:
+    - Name: Curso_Optix
+      Type: RemoteInfluxDBStoreTable
+      Children:
+      - Name: Tags
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=9;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=9;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: Mixer
+          Type: StoreColumn
+          DataType: Float
+        - Name: Heater
+          Type: StoreColumn
+          DataType: Float
+        - Name: Nivel_1
+          Type: StoreColumn
+          DataType: Float
+        - Name: Nivel_2
+          Type: StoreColumn
+          DataType: Float
+        - Name: PH_1
+          Type: StoreColumn
+          DataType: Float
+        - Name: PH_2
+          Type: StoreColumn
+          DataType: Float
+        - Name: Bomba
+          Type: StoreColumn
+          DataType: Float
+  - Name: Token
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "imRSNzugCH_ic82yixYJKVm4Qa7wW_jpJA-vl36OAguyvKpjNIaGlGTtiexhYzdW37NIXJuqyn0PO9k08cX5UQ=="
+  - Name: Organization
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "IPN"
+  - Name: Bucket
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "OptixDB"
+  - Name: MaxColumnNameLength
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=9;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=67
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=59
+    Direction: Forward
+  - Name: ServerCertificate
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=24;%PROJECTDIR%/PKI/Issuers/Certs/us-east-1-1.aws.cloud2.influxdata.pem"

@@ -1,0 +1,18 @@
+Name: Publisher
+Id: g=4ce069e68dca3ed345038306c74232d8
+Type: FolderType
+Children:
+- Name: Nivel_1
+  Id: g=a32413c6efbe0e8a0fb563df0ed9e1d6
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "0"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

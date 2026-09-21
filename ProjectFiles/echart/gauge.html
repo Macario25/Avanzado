@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Carga ECharts desde CDN o archivo local -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body style="margin:0; height:100vh; width:100vw; overflow:hidden;">
+  <div id="gaugeContainer" style="width:100%; height:100%;"></div>
+
+  <script>
+    var chartDom = document.getElementById('gaugeContainer');
+    var myChart = echarts.init(chartDom);
+
+    // Función llamada por FactoryTalk Optics para actualizar la opción del gráfico
+    function setChartOption(jsonString) {
+      try {
+        var option = JSON.parse(jsonString);
+        myChart.setOption(option, true);
+      } catch (e) {
+        console.error("Error al procesar JSON:", e);
+      }
+    }
+
+    // Ajustar tamaño si cambia la pantalla
+    window.onresize = function() {
+      myChart.resize();
+    };
+  </script>
+</body>
+</html>

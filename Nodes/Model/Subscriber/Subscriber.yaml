@@ -1,0 +1,7 @@
+Name: Subscriber
+Id: g=e16cd5bb8cc75c9b076c477f58d99d05
+Type: FolderType
+Children:
+- Name: Nivel_1
+  Type: BaseDataVariableType
+  DataType: Float
